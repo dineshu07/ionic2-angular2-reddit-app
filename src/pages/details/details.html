@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+     {{item.title}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-card>  
+        <img *ngIf ="item.preview.images[0].source.url" src="{{item.preview.images[0].source.url}}"/>
+
+        <ion-card-content>
+            {{item.title}}
+        </ion-card-content>
+
+        <ion-list>
+            <ion-item>
+                <ion-icon name="person" item-left></ion-icon> 
+                Author
+                <ion-note item-right>{{item.author}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="thumbs-up" item-left></ion-icon> 
+                Score
+                <ion-note item-right>{{item.score}}</ion-note>
+            </ion-item>
+            <ion-item>
+                <ion-icon name="chatboxes" item-left></ion-icon> 
+                Comments
+                <ion-note item-right>{{item.num_comments}}</ion-note>
+            </ion-item>
+        </ion-list>
+        
+    </ion-card>
+</ion-content>
